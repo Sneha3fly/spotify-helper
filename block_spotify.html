@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Access Blocked - Family Safety</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border: 2px solid #cc0000;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff4d4d;
+      width: 400px;
+      text-align: center;
+    }
+    h1 {
+      color: #cc0000;
+    }
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    input, textarea, button {
+      padding: 10px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #cc0000;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #a30000;
+    }
+    small {
+      display: block;
+      margin-top: 10px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>🚫 Spotify Blocked</h1>
+    <p>This app has been blocked by your family administrator (Naresh).<br>
+    To request access, please fill out the form below.</p>
+    <form id="request-form">
+      <input type="text" placeholder="Your full name" required>
+      <input type="number" placeholder="Your age" required>
+      <textarea placeholder="Why do you want to access Spotify?" required></textarea>
+      <button type="submit">Submit Request</button>
+      <small>All requests are monitored.</small>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("request-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Request submitted for review. Redirecting to emotional recovery program...");
+      setTimeout(() => {
+        window.location.href = "https://www.duolingo.com/";
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
